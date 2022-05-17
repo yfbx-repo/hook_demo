@@ -1,5 +1,7 @@
 # hook_demo
 
+VirtualXposed 初始化时需要翻墙
+
 ## 操作步骤
 1. 安装 [VirtualXposed](https://github.com/android-hacker/VirtualXposed/blob/vxp/CHINESE.md)
 2. 安装目标APP,安装hook程序
