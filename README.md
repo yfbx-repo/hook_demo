@@ -1,6 +1,8 @@
 # hook_demo
 
-VirtualXposed 初始化时需要翻墙
+Xposed框架HookDemo
+该项目中的例子主要用来检测隐私合规相关问题，可自行添加需要hook的方法
+
 
 ## 操作步骤
 1. 安装 [VirtualXposed](https://github.com/android-hacker/VirtualXposed/blob/vxp/CHINESE.md),注意0.18.2版本之前只支持32位App
@@ -12,5 +14,6 @@ VirtualXposed 初始化时需要翻墙
 
     
     
-## hook修改
+## Other
   修改hook程序代码，筛选要hook的进程包名和方法
+  VirtualXposed 初始化时需要翻墙
