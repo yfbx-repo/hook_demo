@@ -1,5 +1,6 @@
 package com.yfbx.hookdemo.hook
 
+import android.app.ActivityManager
 import android.content.ContentResolver
 import android.hardware.SensorManager
 import android.location.LocationManager
@@ -68,6 +69,11 @@ class HookPrivacyKotlin : IXposedHookLoadPackage {
         hook<SensorManager> {
             method("getDefaultSensor", Int::class.java)
             beforeHook { log("调用getDefaultSensor获取了传感器信息") }
+        }
+
+        hook<ActivityManager> {
+            method("getRunningAppProcesses")
+            beforeHook { log("调用getRunningAppProcesses获取了运行中的进程") }
         }
     }
 }
