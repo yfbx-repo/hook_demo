@@ -3,6 +3,7 @@ package com.yfbx.hookdemo
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         editText.setText(App.hookPackage)
         okButton.setOnClickListener {
             App.hookPackage = editText.text.toString().trim()
+            Toast.makeText(this, "package saved", Toast.LENGTH_LONG).show()
         }
     }
 
