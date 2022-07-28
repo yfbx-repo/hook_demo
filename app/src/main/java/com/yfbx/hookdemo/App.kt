@@ -2,7 +2,6 @@ package com.yfbx.hookdemo
 
 
 import android.app.Application
-import com.yfbx.hookdemo.utils.pref
 import kotlin.properties.Delegates
 
 /**
@@ -12,9 +11,10 @@ import kotlin.properties.Delegates
 
 class App : Application() {
 
+
     companion object {
         var instance by Delegates.notNull<App>()
-        var hookPackage by pref("")
+        val packageName = "com.ypcang.android.shop"
     }
 
     override fun onCreate() {

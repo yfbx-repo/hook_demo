@@ -16,7 +16,7 @@ class HookPrivacyKotlin : IXposedHookLoadPackage {
 
     override fun handleLoadPackage(loadPackageParam: XC_LoadPackage.LoadPackageParam?) {
         val packageName = loadPackageParam?.packageName ?: return
-        if (packageName != App.hookPackage) return
+        if (packageName != App.packageName) return
 
         XposedBridge.log("---------开始hook---------")
         XposedBridge.log("包名：$packageName")

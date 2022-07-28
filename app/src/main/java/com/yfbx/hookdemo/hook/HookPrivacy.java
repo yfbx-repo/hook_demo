@@ -13,18 +13,18 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 public class HookPrivacy extends XC_MethodHook implements IXposedHookLoadPackage {
 
-    public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) {
-        if (lpparam == null) {
+    public void handleLoadPackage(XC_LoadPackage.LoadPackageParam param) {
+        if (param == null) {
             return;
         }
         /*判断hook的包名*/
-        if (!lpparam.packageName.equals(App.Companion.getHookPackage())) {
+        if (!param.packageName.equals(App.Companion.getPackageName())) {
             return;
         }
 
 
         XposedBridge.log("---------开始hook---------");
-        XposedBridge.log("包名：" + lpparam.packageName);
+        XposedBridge.log("包名：" + param.packageName);
 
 
         hook(
