@@ -25,6 +25,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def type = variant.buildType.name
+            outputFileName = "HookDemo_${type}_${versionName}.apk"
+        }
+    }
 }
 
 dependencies {
