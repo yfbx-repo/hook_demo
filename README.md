@@ -1,6 +1,6 @@
 # hook_demo
 
-Xposed框架HookDemo
+Xposed框架HookDemo.   
 该项目中的例子主要用来检测隐私合规相关问题，可自行添加需要hook的方法
 
 
@@ -14,5 +14,5 @@ Xposed框架HookDemo
     
     
 ## Other
-  修改hook程序代码，筛选要hook的进程包名和方法
-  VirtualXposed 初始化时需要翻墙
+  - 修改hook程序代码，筛选要hook的进程包名和方法
+  - VirtualXposed 初始化时需要翻墙
