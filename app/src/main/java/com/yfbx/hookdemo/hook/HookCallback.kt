@@ -1,7 +1,6 @@
 package com.yfbx.hookdemo.hook
 
 import de.robv.android.xposed.XC_MethodHook
-import de.robv.android.xposed.XposedBridge
 
 /**
  * Date: 2022-07-27
@@ -29,10 +28,6 @@ class HookCallback : XC_MethodHook() {
 
     override fun afterHookedMethod(param: MethodHookParam?) {
         afterHookedMethod?.invoke(param)
-        if (afterHookedMethod == null) {
-            XposedBridge.log(getMethodStack())
-            XposedBridge.log("<---\n")
-        }
         super.afterHookedMethod(param)
     }
 

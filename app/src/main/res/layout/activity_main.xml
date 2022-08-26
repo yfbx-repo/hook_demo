@@ -8,11 +8,21 @@
     tools:context="com.yfbx.hookdemo.MainActivity"
     tools:ignore="HardcodedText">
 
-    <TextView
+    <EditText
+        android:id="@+id/package_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="package name"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/confirm_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="这个模块是用来检测用户隐私合规的，在用户未授权同意前，调用接口获取信息属于违规"
-        android:textSize="18sp"
-        tools:ignore="HardcodedText" />
+        android:layout_gravity="center"
+        android:text="confirm"
+        android:textAllCaps="false" />
+
 
 </LinearLayout>

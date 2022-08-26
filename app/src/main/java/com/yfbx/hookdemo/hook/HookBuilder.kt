@@ -40,7 +40,7 @@ class HookBuilder {
     }
 
     fun log(text: String) {
-        XposedBridge.log(text)
+        XposedBridge.log("\n--->$text")
     }
 
     fun printStack() {

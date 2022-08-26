@@ -9,8 +9,7 @@ Xposed框架HookDemo
 2. 安装目标APP,安装hook程序
 3. 进入VirtualXposed，在主屏长按添加应用，将目标APP和hook程序添加到虚拟机
 4. 在虚拟机中打开`Xposed Installer`,进入模块，勾选hook模块，重启Xposed
-5. 在虚拟机中打开hook程序，切换到后台,再进入`Xposed Installer`日志模块清除日志
-6. 操作目标APP，进入`Xposed Installer`日志模块刷新日志
+5. 在虚拟机中打开并操作目标APP，在logcat中筛选Xposed查看日志
 
     
     
