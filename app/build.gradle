@@ -19,9 +19,21 @@ android {
         versionName "1.0.${versionCode}"
     }
 
+    signingConfigs {
+        release {
+            storeFile file("../hook.keystore")
+            keyAlias 'yfbx'
+            keyPassword '123456'
+            storePassword '123456'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
